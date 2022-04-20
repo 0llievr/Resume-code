@@ -1,0 +1,9 @@
+const String LoginViewRoute = "LoginView";
+const String SignUpViewRoute = "SignUp";
+const String HomeViewRoute = "HomeView";
+const String CreateTripViewRoute = "CreateTripView";
+const String CreateInventoryViewRoute = "CreateInventoryView";
+const String CreateListViewRoute = "CreateListView";
+const String TripDetailsViewRoute = "TripDetailsView";
+const String CaptureViewRoute = "CaptureView";
+// Generate the views here

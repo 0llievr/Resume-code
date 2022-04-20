@@ -1,0 +1,2 @@
+super runner line:
+mpirun -n 4 -ppn 2 -f ../c2_hosts ./LRS_Double; mpirun -n 4 -ppn 2 -f ../c2_hosts ./LRS_Float; mpirun -n 4 -ppn 2 -f ../c2_hosts ./TS_Double; mpirun -n 4 -ppn 2 -f ../c2_hosts ./TS_Float

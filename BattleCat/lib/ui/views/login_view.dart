@@ -1,0 +1,69 @@
+import 'package:grampacker/ui/shared/ui_helpers.dart';
+import 'package:grampacker/ui/widgets/helpers/busy_button.dart';
+import 'package:grampacker/ui/widgets/helpers/input_field.dart';
+import 'package:grampacker/ui/widgets/helpers/text_link.dart';
+import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
+import 'package:grampacker/viewmodels/login_view_model.dart';
+
+class LoginView extends StatelessWidget {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return ViewModelBuilder<LoginViewModel>.reactive(
+      viewModelBuilder: () => LoginViewModel(),
+      builder: (context, model, child) => Scaffold(
+          backgroundColor: Colors.white,
+          body: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 50),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(
+                  height: 150,
+                  //icon image here
+                ),
+                InputField(
+                  placeholder: 'Email',
+                  controller: emailController,
+                ),
+                verticalSpaceSmall,
+                InputField(
+                  placeholder: 'Password',
+                  password: true,
+                  controller: passwordController,
+                ),
+                verticalSpaceMedium,
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    BusyButton(
+                      title: 'Login',
+                      busy: model.busy,
+                      onPressed: () {
+                        model.login(
+                          email: emailController.text,
+                          password: passwordController.text,
+                        );
+                      },
+                    )
+                  ],
+                ),
+                verticalSpaceMedium,
+                TextLink(
+                  'Create an Account if you\'re new.',
+                  onPressed: () {
+                    model.navigateToSignUp();
+                  },
+                )
+              ],
+            ),
+          )),
+    );
+  }
+}

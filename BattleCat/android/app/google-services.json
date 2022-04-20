@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "709184586925",
+    "project_id": "battlecats-3acb0",
+    "storage_bucket": "battlecats-3acb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709184586925:android:e58a3f4f55fba73c22b224",
+        "android_client_info": {
+          "package_name": "com.csucswe.battlecats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709184586925-4c02qd33hte0cqfsv4p031u5qgl2miko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhrhpy-6d3-H8crbALQDjBtEB52wZcVP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709184586925-4c02qd33hte0cqfsv4p031u5qgl2miko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
